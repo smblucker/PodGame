@@ -1,9 +1,9 @@
 /*
- * Class that initializes pod positions (allowing retrieval via get methods),
- * defines pod movement, records player position, and determines when pod is
- * caught.
+ * Support class to PodApp and PodList classes that
+ * specifies Pod object movement and that determines
+ * position equality between Player and Pods.
  */
-package podgame;
+package project6;
 
 /**
  *
@@ -14,7 +14,6 @@ public class Pod
    private int pod_x;           //instance variable for x-coordinate of pod 
    private int pod_y;           //instance variable for y-coordinate of pod
    private String pod_dir;      //instance variable for pod direction
-   private boolean caught;      //instance variable that sets default caught value
    private int board_w;         //instance variable for width of game board
    private int board_h;         //instance variable for height of game board
 
@@ -26,32 +25,19 @@ public class Pod
        this.pod_dir = direction;
        this.board_w = width;
        this.board_h = height;
-       this.caught = false;
    }
    
-   //Method that returns x_coordinate of pod
-   public int getX()
-   {
-       return pod_x;
-   }
    
-   //Method that returns y_coordinate of pod
-   public int getY()
+   //Method that overrides .equals method
+   public boolean equals(Object obj)
    {
-       return pod_y;
-   }
-   
-   //Method that defines player position
-   public void playerAt(int x, int y)
-   {
-       if(x==this.pod_x && y==this.pod_y)
-           this.caught = true;
-   }
-   
-   //Method that returns true if pod is caught
-   public boolean isCaught()
-   {
-       return caught;
+       if(!(obj instanceof Pod))
+           return false;
+       else
+       {
+           Pod p = (Pod)obj;
+           return (pod_x == p.pod_x && pod_y == p.pod_y);
+       }
    }
    
    //Method that defines movement of pods
@@ -145,5 +131,4 @@ public class Pod
        }
 
    }
-   
 }
