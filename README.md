@@ -1,4 +1,4 @@
-#Game Structure and User Interface
+# Game Structure and User Interface
 
 Basic structure of the game consists of player, marked as '#', moving around a
 2-D map trying to collect pods, marked as '*'.
