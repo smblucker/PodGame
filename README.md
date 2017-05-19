@@ -24,8 +24,8 @@ The basic structure of the game consists of player ('#') moving around a
 
 ## Instructional Objectives
 
-  * The specific educational aims of this project include, but should not be
-  limited to, the following:
+The specific educational aims of this project include, but should not be
+limited to, the following:
 
   * Provide introduction to generalized container classes--ie. ArrayLists-- and
   corresponding methods in Java
