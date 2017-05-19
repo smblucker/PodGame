@@ -1,10 +1,10 @@
-# Game Structure and User Interface
+## Game Structure and User Interface
 
 The basic structure of the game consists of player ('#') moving around a
 2-D map trying to collect pods ('*').
 
   * The game provides movement buttons for the player ('N', 'S', 'E', 'W') that
-move the player one square in the desired direction when selected.
+  move the player one square in the desired direction when selected.
 
   * The player is bound by the dimensions of the game board and does not wrap to
   the opposing boundary.
@@ -20,4 +20,14 @@ move the player one square in the desired direction when selected.
 
   * To encourage efficient gameplay, pods will regenerate every tenth move of
   the player at a random location on the game board, and in a random direction,
-  until all pods are caught. 
+  until all pods are caught.
+
+## Instructional Objectives
+
+  * The specific educational aims of this project include, but should not be
+  limited to, the following:
+
+  * Provide introduction to generalized container classes--ie. ArrayLists-- and
+  corresponding methods in Java
+
+  * Reinforce proper object-oriented design and development of Java classes
